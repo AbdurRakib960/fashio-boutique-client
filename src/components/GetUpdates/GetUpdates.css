@@ -1,0 +1,65 @@
+.getUpdates-container {
+  width: 100%;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.updates {
+  width: 60%;
+  text-align: center;
+}
+.updates-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+.updates-input-wrapper input {
+  border: none;
+  padding: 5px;
+  width: 80%;
+}
+.updates-input-wrapper input:focus {
+  outline: none;
+}
+.updates-input-wrapper button {
+  border: none;
+  height: 28px;
+  color: coral;
+}
+.updates p {
+  font-weight: 600;
+  letter-spacing: 3px;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.updates h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: coral;
+}
+.sumbit-email {
+  width: 50%;
+  border: 1px solid lightgray;
+  height: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .updates p {
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+  }
+  .updates h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  .sumbit-email {
+    width: 100%;
+  }
+}

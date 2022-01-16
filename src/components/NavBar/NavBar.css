@@ -1,0 +1,14 @@
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  color: black;
+}
+.nav-links li {
+  margin: 0px 6px;
+}
+.login,
+.register,
+.cart {
+  text-decoration: none;
+  color: black;
+}
