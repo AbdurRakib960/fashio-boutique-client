@@ -23,17 +23,20 @@ export const categoryData = [
     {
         id: 1,
         title: "SHIRT STYLE",
-        img: "https://rukminim1.flixcart.com/image/332/398/kfh5ifk0-0/shirt/e/h/t/44-11896028-roadster-original-imafvx8bmzryyfzy.jpeg?q=50"
+        img: "https://rukminim1.flixcart.com/image/332/398/kfh5ifk0-0/shirt/e/h/t/44-11896028-roadster-original-imafvx8bmzryyfzy.jpeg?q=50",
+        cat:"man"
     },
     {
         id:3,
         title: "JEANS COLLECTION",
-        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST2PohdQz0Yuzw_e3RFHapPyesw30XgvPanfwPR8R41Gm45jP69bE90H_W6nxA9KJbl6s&usqp=CAU"
+        img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcST2PohdQz0Yuzw_e3RFHapPyesw30XgvPanfwPR8R41Gm45jP69bE90H_W6nxA9KJbl6s&usqp=CAU",
+        cat:"jeans"
     },
     {
         id:2,
         title: "LOUNGEWERE LOVE",
-        img: "https://www.kappahl.com/productimages/879999/879999_f.jpg?preset=ProductListImageM"
+        img: "https://www.kappahl.com/productimages/879999/879999_f.jpg?preset=ProductListImageM",
+        cat: "women"
     },
     
 ];

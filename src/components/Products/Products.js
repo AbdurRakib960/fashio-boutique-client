@@ -1,48 +1,75 @@
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
-import React from "react";
-import { productsData } from "../../data";
+import React, { useEffect, useState } from "react";
+import { publicRequest } from "../../requestMethos";
+import ProductsCard from "../ProductsCard/ProductsCard";
 import "./Products.css";
 
-const Products = () => {
-  const data = productsData;
-  return (
-    <Grid container spacing={4} sx={{ marginTop: "4rem" }}>
-      {data.map((products) => (
-        <Grid
-          className="products-container"
-          item
-          key={products.id}
-          xs={12}
-          sm={6}
-          md={6}
-          lg={4}
-          xl={3}
-        >
-          <div className="products-wrapper">
-            <img
-              style={{ width: "100%", height: "100%"}}
-              src={products.img}
-              alt=""
-            />
-          </div>
+const Products = ({ cat, filters, sort }) => {
+  const [products, setProducts] = useState([]);
+  const [filterProduct, setFilterProduct] = useState([]);
 
-          <div className="information-wrapper">
-            <div className="icon">
-              <SearchIcon />
-            </div>
-            <div className="icon">
-              <ShoppingCartIcon />
-            </div>
-            <div className="icon">
-              <FavoriteIcon />
-            </div>
-          </div>
-        </Grid>
-      ))}
-    </Grid>
+  useEffect(() => {
+    const getProducts = async () => {
+      const res = await publicRequest.get(
+        cat
+          ? `http://localhost:5000/api/products?category=${cat}`
+          : `http://localhost:5000/api/products`
+      );
+      setProducts(res.data);
+    };
+    getProducts();
+  }, [cat]);
+
+  useEffect(() => {
+    cat &&
+      setFilterProduct(
+        products.filter((item) =>
+          Object.entries(filters).every(([key, value]) =>
+            item[key].includes(value)
+          )
+        )
+      );
+  }, [cat, products, filters]);
+
+  useEffect(() => {
+    if (sort === "newest") {
+      setFilterProduct((prev) =>
+        [...prev].sort((a, b) => a.createdAt - b.createdAt)
+      );
+    } else if (sort === "asc") {
+      setFilterProduct((prev) => [...prev].sort((a, b) => a.price - b.price));
+    } else {
+      setFilterProduct((prev) => [...prev].sort((a, b) => b.price - a.price));
+    }
+  }, [sort]);
+
+  return (
+    <Container>
+      <Grid
+        container
+        sx={{
+          marginTop: "4rem",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {cat
+          ? filterProduct.map((products) => (
+              <ProductsCard
+                key={products._id}
+                products={products}
+              ></ProductsCard>
+            ))
+          : products.map((products) => (
+              <ProductsCard
+                key={products._id}
+                products={products}
+              ></ProductsCard>
+            ))}
+      </Grid>
+    </Container>
   );
 };
 

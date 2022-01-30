@@ -1,11 +1,20 @@
-/* .products-container {
-  width: 100%;
-  min-height: 300px;
-  position: relative;
-  background-color: #f5fbfd;
+.products-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 280px;
+  position: relative;
+  padding: 10px;
+}
+.products-wrapper {
+  height: 100%;
+}
+.products-wrapper-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
 }
 .products-container:hover .information-wrapper {
   opacity: 1;
@@ -16,8 +25,8 @@
 .information-wrapper {
   position: absolute;
   opacity: 0;
-  top: 45%;
-  left: 32%;
+  top: 40%;
+  left: 23%;
   z-index: 3;
   display: flex;
   align-items: center;
@@ -38,4 +47,4 @@
 .icon:hover {
   background-color: #f9f5f5;
   transform: scale(1.1);
-} */
+}

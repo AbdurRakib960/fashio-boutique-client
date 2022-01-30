@@ -1,12 +1,12 @@
 @media only screen and (max-width: 900px) {
   .footer-Container {
-    text-align: center;
+    text-align: justity;
   }
   .social-icon {
     justify-content: center;
   }
   .contact-list ul li {
-    justify-content: center;
+    justify-content: justify;
   }
 }
 .footer-Container {
@@ -19,13 +19,13 @@
 }
 .middle-left ul li {
   list-style-type: none;
-  line-height: 35px;
-  font-size: 18px;
+  line-height: 24px;
+  font-size: 16px;
 }
 .middle-right ul li {
   list-style-type: none;
-  line-height: 35px;
-  font-size: 18px;
+  line-height: 24px;
+  font-size: 16px;
 }
 .middle-right {
   flex: 1;
@@ -35,9 +35,9 @@
 }
 .contact-list ul li {
   list-style-type: none;
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
-  line-height: 40px;
+  line-height: 35px;
   align-items: center;
 }
 .left-title h1,
@@ -49,7 +49,7 @@
 .left-description {
   font-size: 16px;
   letter-spacing: 2px;
-  font-weight: 600;
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 .social-icon {

@@ -10,7 +10,7 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <Container className="footer-Container">
-      <Grid container spacing={4}>
+      <Grid container spacing={4} >
         <Grid item xs={12} sm={12} md={6} lg={4} xl={4}>
           <div className="left-side">
             <div className="left-title">
@@ -64,9 +64,9 @@ const Footer = () => {
             </div>
             <div className="contact-list">
               <ul>
-                <li> <LocationOnIcon style={{marginRight: '1rem'}}/> Biswanath, Sylhet, Bangladesh</li>
-                <li><CallIcon style={{marginRight: '1rem'}} /> +8801758259614</li>
-                <li><EmailOutlinedIcon style={{marginRight: '1rem'}}/> dev.abdurRakib@gmail.com</li>
+                <li> <LocationOnIcon style={{marginRight: '1rem', fontSize: '16px'}}/> Biswanath, Sylhet, Bangladesh</li>
+                <li><CallIcon style={{marginRight: '1rem', fontSize: '16px'}} /> +8801758259614</li>
+                <li><EmailOutlinedIcon style={{marginRight: '1rem', fontSize: '16px'}}/> dev.abdurRakib@gmail.com</li>
               </ul>
             </div>
           </div>

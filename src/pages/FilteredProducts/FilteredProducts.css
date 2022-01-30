@@ -2,6 +2,29 @@
   .filtered-product-wrapper {
     flex-direction: column;
   }
+  .filter-wrapper,
+  .sort-products-wrapper {
+    flex-direction: column;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+  .color-picker {
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  .size-picker {
+    margin-left: none;
+  }
+  .filter-select {
+    margin-left: 0;
+  }
+  .sort-title {
+    margin-bottom: 1rem;
+  }
+  .filtered-product-wrapper {
+    margin-top: 1rem;
+  }
 }
 
 .filtered-products-container {

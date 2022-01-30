@@ -34,7 +34,7 @@
   font-size: 16px;
   margin-top: 1rem;
 }
-.updates h1 {
+.updates h2 {
   font-size: 48px;
   font-weight: 800;
   color: coral;
@@ -55,7 +55,7 @@
     font-size: 14px;
     letter-spacing: 2px;
   }
-  .updates h1 {
+  .updates h2 {
     font-size: 35px;
     font-weight: 600;
   }
